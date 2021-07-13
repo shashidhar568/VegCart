@@ -1,0 +1,50 @@
+  <div class="container">
+      <div class="row">
+          <div class="col-md-5 regi-form">
+              <h2 class="text-center">Register</h2>
+              <form>
+                  <div class="form-group">
+                      <label for="exampleInputEmail1" class="text">First Name</label>
+                      <input type="text" class="form-control" (keyup)="enableRegisterButton('fname')"
+                          [(ngModel)]="userDetails.name" name="fname" placeholder="Enter First Name">
+                      <span class="validationMessage"
+                          *ngIf="validationMessages.name.show">{{validationMessages.name.msg}}</span>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                      <label for="exampleInputPassword1" class="text">Last
+                          Name</label>
+                      <input type="text" class="form-control" (keyup)="enableRegisterButton('lName')"
+                          [(ngModel)]="userDetails.lName" name="lname" placeholder="Enter Last Name">
+                      <span class="validationMessage"
+                          *ngIf="validationMessages.lName.show">{{validationMessages.lName.msg}}</span>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                      <label for="exampleInputPassword1" class="text">Email</label>
+                      <input type="text" class="form-control" (keyup)="enableRegisterButton('email')"
+                          [(ngModel)]="userDetails.email" name="email" placeholder="Enter Email">
+                      <span class="validationMessage"
+                          *ngIf="validationMessages.email.show">{{validationMessages.email.msg}}</span>
+                  </div>
+                  <br>
+                  <div class="form-group">
+                      <label for="exampleInputPassword1" class="text">Password</label>
+                      <input type="password" class="form-control" (keyup)="enableRegisterButton('password')"
+                          [(ngModel)]="userDetails.password" name="password" placeholder="Enter Password">
+                      <span class="validationMessage"
+                          *ngIf="validationMessages.password.show">{{validationMessages.password.msg}}</span>
+                  </div>
+
+
+                  <div>
+
+                      <br>
+                      <button type="submit" class="btn btn-primary" [ngClass]="{disableCustom: disableRegisterButton }"
+                          (click)="userRegistration()">Register</button>
+                  </div>
+
+              </form>
+          </div>
+      </div>
+  </div>

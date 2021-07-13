@@ -1,0 +1,27 @@
+.title-content {
+  width: 50px;
+  height: 50px;
+  background: #fff(204, 67, 67);
+  position: relative;
+  animation-name: mymove;
+  animation-duration: 5s;
+  animation : mymove 25s 2s infinite alternate;
+  /* animation: mymove 15s infinite alternate, shrink 15s infinite alternate; */
+}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 1050px;}
+  /* from {
+    transform : scale(1);
+    opacity   : 1;
+}
+50% {
+    transform : scale(0.75);
+    opacity   : 0.25;
+}
+to {
+    transform : scale(1);
+    opacity   : 1;
+} */
+}

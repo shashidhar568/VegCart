@@ -1,0 +1,31 @@
+<div class="container login-container">
+  <div class="row">
+    <div class="col-md-6 login-form-1">
+      <img class="img-fluid" src="../../assets/lft-logo.jpg" alt="">
+    </div>
+    
+    <div class="col-md-6 login-form-2">
+      <h3>Login</h3>
+      <form>
+        <div class="form-group">
+          <input autocomplete="off" type="email" class="form-control" (keyup)="enableLoginButton()" [(ngModel)]="userDetails.email"
+            name="email" placeholder="username">
+        </div>
+        <br/>
+        <div class="form-group">
+          <input autocomplete="off" type="password" class="form-control" (keyup)="enableLoginButton()" [(ngModel)]="userDetails.password"
+            name="password" placeholder="password">
+        </div>
+        <br>
+        <div class="form-group">
+          <button type="submit" (click)="checkUser()" [ngClass]="{disableCustom: disableLoginButton }"
+            class="btn btn-primary">Sign in</button>
+        </div>
+
+      </form>
+    </div>
+    <!-- <div *ngIf="showWarning" class="alert alert-danger" role="alert">
+              Please enter correct user details
+          </div> -->
+  </div>
+</div>
